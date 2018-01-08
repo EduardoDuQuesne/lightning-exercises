@@ -58,9 +58,9 @@
 // Make a loop .forEach and .filter on this array to get the same result
 // Make an array calle fave_demo that contains only ages from 18-49
 
-let ages = [12, 23, 89, 16, 34, 19, 2, 7, 45, 50, 26, 102]
+// let ages = [12, 23, 89, 16, 34, 19, 2, 7, 45, 50, 26, 102]
 
-let fave_demo = [];
+// let fave_demo = [];
 
 // First Exercise 
 
@@ -113,10 +113,77 @@ let fave_demo = [];
 
 // Third Exercise //
 
-let yoda_quote = ["the", "greatest", "teacher", "failure", "is"];
+// let yoda_quote = ["the", "greatest", "teacher", "failure", "is"];
 
-// Capitalize 'the' insert a comma after treacher and output "Yoda says, "The greatest teacher, failuer is"
+// // Capitalize 'the' insert a comma after treacher and output "Yoda says, "The greatest teacher, failuer is"
 
-let yoda_output = "Yoda says, ";
-yoda_output += `'${yoda_quote[0].toUpperCase().slice(0, 1) + yoda_quote[0].slice(1)} ${yoda_quote[1]} ${yoda_quote[2]}, ${yoda_quote[3]} ${yoda_quote[4]}"`;
-console.log(yoda_output);
+// let yoda_output = "Yoda says, ";
+// yoda_output += `'${yoda_quote[0].toUpperCase().slice(0, 1) + yoda_quote[0].slice(1)} ${yoda_quote[1]} ${yoda_quote[2]}, ${yoda_quote[3]} ${yoda_quote[4]}"`;
+// console.log(yoda_output);
+
+
+
+//////////// 01/04/18 /////////////
+
+// expected result: [3, 5, 7, 9, 11, 13]
+// let nums = [1, 2, 3, 4, "5", 6, "7"];
+// let newNums = [];
+
+// nums.forEach((a, b) => {
+//     if (a + b > 1) { 
+//     newNums.push(parseInt(a) + parseInt(b));
+//     }
+// });
+// console.log(newNums);
+
+/////////////// 01/08/18 //////////////////////
+
+
+
+// Loop through this object and add each member object's key as an ID. Log the results.
+
+let customers = {
+    active: {
+      a87b6345: {
+        name: "Gary Harrison",
+        age: 23,
+        member_level: "gold"
+      },
+      b345hy66: {
+        name: "Harry Garrison",
+        age: 34,
+        member_level: "silver"
+      },
+      nh56yht8: {
+        name: "Mary Terryson",
+        age: 78,
+        member_level: "platinum"
+      },
+      j677yd456: {
+        name: "Barry Sonnyman",
+        age: 44,
+        member_level: "gold"
+      }
+    },
+    inactive: {
+      ur56tfgt: {
+        name: "Barb Justice",
+        age: 56,
+        member_level: "none"
+      },
+      d56gt6: {
+        name: "Jane L'eggo",
+        age: 11,
+        member_level: "none"
+      }
+    }
+  };
+
+for (let status in customers) {
+    let keys = Object.keys(customers[status]);
+    keys.forEach((key) => {
+        customers[status][key].id = key;
+    });
+}
+console.log(customers);
+
