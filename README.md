@@ -2,4 +2,4 @@
 
 ## Lightning-Exercises
 
-Playground Repository for an assortment of daily NSS exercises.
+Playground repository for an assortment of daily NSS exercises.
